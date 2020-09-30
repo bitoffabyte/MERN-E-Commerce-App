@@ -16,7 +16,7 @@ const Navbar = () => {
                 offset >= document.body.scrollHeight * 0.5 ? 'onscroll' : ''
             }`}
         >
-            <div className="logo">OLX</div>
+            <div className="logo">Amazon</div>
             <input type="checkbox" id="click" />
             <label htmlFor="click" className="menu-btn">
                 <i className="fas fa-bars"></i>
