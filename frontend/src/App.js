@@ -1,15 +1,22 @@
 import React from 'react';
-import './App.css';
-import Navbar from './Components/Navbar/Navbar';
-import Footer from './Components/Footer/Footer';
-function App() {
+import { Container } from 'react-bootstrap';
+import Header from './Components/Navbar';
+import Footer from './Components/Footer';
+import HomeScreen from './Screens/HomeScreen';
+
+import './bootstrap.min.css';
+const App = () => {
     return (
-        <div className="App">
-            <Navbar />
-            <main>Hello World</main>
+        <>
+            <Header />
+            <main className="py-3">
+                <Container>
+                    <HomeScreen />
+                </Container>
+            </main>
             <Footer />
-        </div>
+        </>
     );
-}
+};
 
 export default App;

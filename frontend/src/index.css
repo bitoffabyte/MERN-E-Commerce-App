@@ -11,10 +11,6 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
         monospace;
 }
-body,
-html,
-#root,
-.app {
-    width: 100%;
-    height: 100%;
+main {
+    min-height: 80vh;
 }
