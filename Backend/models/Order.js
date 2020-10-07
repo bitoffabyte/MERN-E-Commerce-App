@@ -4,7 +4,7 @@ const orderSchema = mongo.Schema(
         user: {
             type: mongo.Schema.Types.ObjectId,
             required: true,
-            ref: User,
+            ref: 'User',
         },
         orderItems: [
             {
@@ -83,16 +83,16 @@ const orderSchema = mongo.Schema(
             default: 0.0,
         },
         isPaid: {
-            type: true,
+            type: Boolean,
             default: true,
         },
         paidAt: {
             type: Date,
         },
         isDelivered: {
-            type: boolean,
+            type: Boolean,
             required: true,
-            default: fasle,
+            default: false,
         },
         deliveredAt: {
             type: Date,
@@ -100,5 +100,5 @@ const orderSchema = mongo.Schema(
     },
     { timestamps: true }
 );
-const Order = mongo.model('Order', userSchema);
+const Order = mongo.model('Order', orderSchema);
 export default Order;

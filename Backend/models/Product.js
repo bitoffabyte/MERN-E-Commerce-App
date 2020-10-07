@@ -4,15 +4,15 @@ const reviewSchema = mongo.Schema(
     {
         name: {
             type: String,
-            required: true,
+            // required: true,
         },
         rating: {
             type: Number,
-            required: true,
+            // required: true,
         },
         comment: {
             type: String,
-            required: true,
+            // required: true,
         },
     },
     { timestamps: true }
@@ -29,7 +29,7 @@ const userSchema = mongo.Schema(
             type: String,
             required: true,
         },
-        img: {
+        image: {
             type: String,
             required: true,
         },
@@ -38,10 +38,10 @@ const userSchema = mongo.Schema(
             required: true,
         },
         category: {
-            type: Boolean,
+            type: String,
             required: true,
         },
-        desc: {
+        description: {
             type: String,
             required: true,
         },
@@ -59,6 +59,10 @@ const userSchema = mongo.Schema(
             type: Number,
             required: true,
             default: 0,
+        },
+        price: {
+            type: Number,
+            required: true,
         },
     },
     { timestamps: true }
